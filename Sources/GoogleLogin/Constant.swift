@@ -1,9 +1,8 @@
 //MARK: some constant errors
-
-public enum GoogleAuthError: String {
+public enum GoogleAuthError {
     case rootViewControllerNotFound
     case userIdNotFound
     case userIdTokenNotFound
     case userDataNotFound
-    case unknown
+    case unknown(String)
 }

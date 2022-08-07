@@ -2,14 +2,14 @@ import SwiftUI
 import UIKit
 import GoogleSignIn
 
-public protocol GoogleLoginStatusDelegate: AnyObject {
+public protocol GoogleLoginStatusDelegate {
     func loginSuccess(userID: String, idToken: String, profileImageUrl: String?,
                       email: String?, firstName: String?, lastName: String?)
     func loginFail(error: GoogleAuthError)
 }
 
-public class GoogleLoginController {
-    private weak var delegate: GoogleLoginStatusDelegate?
+open class GoogleLoginController {
+    private var delegate: GoogleLoginStatusDelegate?
     
     public init(delegate: GoogleLoginStatusDelegate) {
         self.delegate = delegate
@@ -25,9 +25,9 @@ public class GoogleLoginController {
     
     private func signIn(clientID: String, viewController: UIViewController){
         let signInConfig = GIDConfiguration.init(clientID: clientID)
-        GIDSignIn.sharedInstance.signIn( with: signInConfig, presenting: viewController, callback: { user, error in
+        GIDSignIn.sharedInstance.signIn( with: signInConfig, presenting: viewController) { user, error in
             if let error = error {
-                self.delegate?.loginFail(error: GoogleAuthError(rawValue: error.localizedDescription) ?? .unknown)
+                self.delegate?.loginFail(error: .unknown(error.localizedDescription))
             } else {
                 guard let currentUser = user else {
                     self.delegate?.loginFail(error: .userDataNotFound)
@@ -49,8 +49,7 @@ public class GoogleLoginController {
                                            profileImageUrl: profileImageUrl, email: userEmail,
                                            firstName: firstName, lastName: lastName)
             }
-        })
+        }
     }
-    
 }
 
