@@ -8,7 +8,7 @@ public protocol GoogleLoginStatusDelegate {
     func loginFail(error: GoogleAuthError)
 }
 
-open class GoogleLoginController {
+public class GoogleLoginController {
     private var delegate: GoogleLoginStatusDelegate?
     
     public init(delegate: GoogleLoginStatusDelegate) {
