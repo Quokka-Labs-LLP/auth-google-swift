@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleURLSchemes</key>
+	<string>com.googleusercontent.apps.300796538157-758re35sat70pg8a1k6i1ic3a2j7i3ih</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -9,13 +11,11 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.1052912351070-ir4udtjti6n0oqav7kbjmc8beomcllmj</string>
+				<string>com.googleusercontent.apps.300796538157-758re35sat70pg8a1k6i1ic3a2j7i3ih</string>
 			</array>
 		</dict>
 	</array>
-	<key>CLIENT_ID</key>
-	<string>1052912351070-ir4udtjti6n0oqav7kbjmc8beomcllmj.apps.googleusercontent.com</string>
-	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1052912351070-ir4udtjti6n0oqav7kbjmc8beomcllmj</string>
+	<key>GIDClientID</key>
+	<string>300796538157-758re35sat70pg8a1k6i1ic3a2j7i3ih.apps.googleusercontent.com</string>
 </dict>
 </plist>
