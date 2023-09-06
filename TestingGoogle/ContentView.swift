@@ -54,15 +54,15 @@ extension ContentView: GoogleLoginStatusDelegate{
     func loginFail(error: GoogleAuthError) {
         switch error {
         case .rootViewControllerNotFound:
-            debugPrint("Root Controller not found")
+            debugPrint("Oops! We encountered a problem signing you in.")
         case .userIdNotFound:
-            debugPrint("Data ID not found")
+            debugPrint("We couldn't find your Google account.")
         case .userIdTokenNotFound:
-            debugPrint("User Token not found")
+            debugPrint("We couldn't retrieve your Google user information.")
         case .userDataNotFound:
-            debugPrint("Data not found")
+            debugPrint("We couldn't find your Google user data.")
         case .unknown(let error):
-            debugPrint(error)
+            debugPrint("Oops! Something unexpected happened during sign-in. The error is: \n\(error)")
         }
     }
 }
