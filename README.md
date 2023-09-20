@@ -33,7 +33,8 @@ Follow these steps to Configure your project to use google-sign-in capablities.
 
 * The reversed client ID is your client ID with the order of the dot-delimited fields reversed. For example -com.googleusercontent.apps.1234567890-abcdefg
 
-* <key>GIDClientID</key>
+```xml
+<key>GIDClientID</key>
 <string>YOUR_IOS_CLIENT_ID</string>
 <key>CFBundleURLTypes</key>
 <array>
@@ -44,6 +45,7 @@ Follow these steps to Configure your project to use google-sign-in capablities.
     </array>
   </dict>
 </array>
+
 
 ## Documentation
 For more understanding how to configure app and update info.plist file refere below Documentation
